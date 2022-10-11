@@ -20,7 +20,7 @@ app.use("/api/boards", authentication, boardsRoute);
 
 app.use(express.static(path.join(__dirname, "/view/build")));
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "/view/build", "index.html"));
 });
 
