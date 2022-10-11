@@ -30,6 +30,6 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(MONGODB_CLUSTER, () => {
   console.log("Mongo connected");
 });
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
   console.log(`Listening to port ${PORT}`);
 });
