@@ -7,16 +7,17 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
+import { APIURL } from "../config";
 
 function Login() {
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
   const [token, setToken] = useState();
-  const API_ENDPOINT = "http://localhost:3000/api/auth";
+
   const navigate = useNavigate();
 
   const login = async (email, password) => {
-    const result = await fetch("/api/auth/login", {
+    const result = await fetch(`${APIURL}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

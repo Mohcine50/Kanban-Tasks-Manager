@@ -4,7 +4,8 @@
   "description": "Kanban Task Mangement web app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd view && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",

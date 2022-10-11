@@ -4,14 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { APIURL } from "../config";
 function Register() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const API_ENDPOINT = "http://localhost:3000/api/auth";
+
   const navigate = useNavigate();
   const register = async (name, email, password) => {
-    const result = await fetch("/api/auth/register", {
+    const result = await fetch(`${APIURL}/api/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

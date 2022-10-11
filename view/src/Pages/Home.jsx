@@ -8,7 +8,7 @@ import NewBoard from "../Components/NewBoard";
 import { useDispatch, useSelector } from "react-redux";
 import { getTodos } from "../features/TodosSlice";
 import { useState } from "react";
-
+import { APIURL } from "../config";
 function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function Home() {
   }, [boardId]);
 
   const logout = async () => {
-    const result = await fetch("/api/auth/logOut");
+    const result = await fetch(`${APIURL}/api/auth/logOut`);
     const json = await result.json();
     console.log(json);
     if (json.message === "Successfully logged out") {
@@ -43,7 +43,7 @@ function Home() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const result = await fetch("api/auth");
+      const result = await fetch(`${APIURL}/api/auth`);
       const user = await result.json();
       return user;
     };

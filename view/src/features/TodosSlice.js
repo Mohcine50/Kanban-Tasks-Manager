@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+import { APIURL } from "../config";
 export const getTodos = createAsyncThunk(
   "todos/getTodos",
   async ({ boardId }, thunkApi) => {
-    const result = await fetch(`/api/todos/allTodos/${boardId}`);
+    const result = await fetch(`${APIURL}/api/todos/allTodos/${boardId}`);
     const todos = await result.json();
 
     return todos;
@@ -13,7 +13,7 @@ export const getTodos = createAsyncThunk(
 export const addTodos = createAsyncThunk(
   "todos/addTodo",
   async ({ title, description, status, boardId }, thunkApi) => {
-    const result = await fetch("/api/todos/addTodo", {
+    const result = await fetch(`${APIURL}/api/todos/addTodo`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export const addTodos = createAsyncThunk(
 export const updateTodo = createAsyncThunk(
   "todos/updateTodo",
   async ({ status, id, prevStatus }, thunkApi) => {
-    const result = await fetch(`/api/todos/updateTodo/${id}`, {
+    const result = await fetch(`${APIURL}/api/todos/updateTodo/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export const updateTodo = createAsyncThunk(
 export const removeTodo = createAsyncThunk(
   "todos/removeTodo",
   async (id, thunkApi) => {
-    const result = await fetch(`/api/todos/deleteTodo/${id}`, {
+    const result = await fetch(`${APIURL}/api/todos/deleteTodo/${id}`, {
       method: "DELETE",
     });
     const todo = await result.json();

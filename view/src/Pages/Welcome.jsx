@@ -5,12 +5,13 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { APIURL } from "../config";
 function Welcome() {
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUser = async () => {
-      const result = await fetch("api/auth");
+      const result = await fetch(`${APIURL}/api/auth`);
       const user = await result.json();
       return user;
     };

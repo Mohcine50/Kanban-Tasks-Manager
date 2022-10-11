@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { APIURL } from "../config";
 
 export const getBoards = createAsyncThunk(
   "boards/getBoards",
 
   async (thunkAPI) => {
-    const result = await fetch("/api/boards/allBoards");
+    const result = await fetch(`${APIURL}/api/boards/allBoards`);
     const boards = await result.json();
     return boards;
   }
@@ -13,7 +14,7 @@ export const getBoards = createAsyncThunk(
 export const addBoard = createAsyncThunk(
   "boards/addBoard",
   async (title, thunkApi) => {
-    const result = await fetch("/api/boards/addBoard", {
+    const result = await fetch(`${APIURL}/api/boards/addBoard`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +29,7 @@ export const addBoard = createAsyncThunk(
 export const deleteBoard = createAsyncThunk(
   "boards/deleteBoard",
   async (id, thunkApi) => {
-    const result = await fetch(`/api/boards/deleteBoard/${id}`, {
+    const result = await fetch(`${APIURL}/api/boards/deleteBoard/${id}`, {
       method: "DELETE",
     });
     const board = await result.json();
