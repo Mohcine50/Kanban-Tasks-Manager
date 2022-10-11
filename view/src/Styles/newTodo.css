@@ -1,0 +1,68 @@
+.newTodo {
+  position: absolute;
+  background-color: var(--bg-dark);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+}
+
+.newTodo > form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newTodo h1 {
+  color: white;
+  font-family: var(--rubik-font);
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.newTodo label {
+  color: white;
+  font-size: 15px;
+}
+.newTodo textarea,
+.newTodo input,
+.newTodo select,
+.newTodo select option {
+  border: 1px solid #656877;
+  width: 305px;
+  border-radius: 4px;
+  background-color: var(--bg-dark);
+  font-size: 16px;
+  font-family: var(--rubik-font);
+  padding: 10px;
+  outline: none;
+  color: white;
+  margin-bottom: 25px;
+}
+.newTodo textarea {
+  height: 140px;
+  resize: none;
+}
+
+.newTodo form > button {
+  background-color: var(--purple-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--rubik-font);
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.display {
+  display: inline-block;
+}
+
+#cancel {
+  background-color: #e60e56;
+}

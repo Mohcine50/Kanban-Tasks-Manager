@@ -1,0 +1,45 @@
+.sidebar {
+  background-color: var(--bg-dark);
+  border-right: 1px solid #656877;
+  font-family: var(--rubik-font);
+  min-height: 100vh;
+}
+.sidebar .logo {
+  padding: 30px 40px;
+}
+.sidebar .logo > h1 {
+  color: white;
+  font-family: var(--rubik-font);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.sidebar .logo > h1 span {
+  color: var(--purple-color);
+}
+
+.sidebar .boards > h1 {
+  color: #656877;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--rubik-font);
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-left: 35px;
+}
+
+.sidebar .add-board {
+  color: var(--purple-color);
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  padding: 25px;
+  gap: 15px;
+  align-items: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 17px;
+}

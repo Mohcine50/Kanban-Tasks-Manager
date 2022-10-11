@@ -1,0 +1,33 @@
+.board {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 15px;
+  padding-left: 25px;
+  color: #656877;
+  gap: 15px;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.board .tags {
+  color: #656877;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.clicked-board {
+  color: white;
+  background-color: var(--purple-color);
+  border-radius: 0px 50px 50px 0;
+}
+
+.board:focus {
+  color: white;
+  background-color: var(--purple-color);
+  border-radius: 0px 50px 50px 0;
+}
+.board:focus .tags {
+  color: white;
+}

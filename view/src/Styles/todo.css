@@ -1,0 +1,38 @@
+.todo {
+  background-color: var(--bg-dark);
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 10px;
+}
+.todo div {
+  display: flex;
+  justify-content: space-between;
+}
+.todo div > h1 {
+  flex: 0.9;
+  color: white;
+  font-size: 15px;
+  font-family: var(--rubik-font);
+  cursor: pointer;
+}
+
+.todo > h2 {
+  margin-top: 10px;
+  color: white;
+  font-size: 12px;
+  font-family: var(--rubik-font);
+  background-color: var(--bg-very-dark);
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+}
+.todo #status {
+  background-color: transparent;
+  font-family: var(--rubik-font);
+  outline: none;
+  border: none;
+  color: white;
+}
+.todo #status {
+  background-color: var(--bg-dark);
+}

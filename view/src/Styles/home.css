@@ -1,0 +1,42 @@
+.home {
+  background-color: var(--bg-very-dark);
+  display: flex;
+}
+
+.home .todos-home {
+  flex-grow: 10;
+}
+.home .todos-home .header {
+  background-color: var(--bg-dark);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .todos-home .header > h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.home .todos-home .header button {
+  color: white;
+  background-color: var(--purple-color);
+  font-size: 17px;
+  font-weight: 400;
+  border: none;
+  padding: 10px 20px;
+  font-family: var(--rubik-font);
+  border-radius: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.home .todos-list {
+  display: flex;
+  padding: 10px 20px;
+}
+
+#logout {
+  background-color: #e60e56;
+}

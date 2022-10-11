@@ -1,0 +1,28 @@
+.welcome {
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+}
+.left {
+  background-color: var(--bg-dark);
+  width: 50vw;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left > img {
+  max-width: 85%;
+}
+
+.right {
+  background-color: var(--bg-very-dark);
+  width: 50vw;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+

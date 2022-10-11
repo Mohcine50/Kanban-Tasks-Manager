@@ -1,0 +1,54 @@
+.register {
+  margin-top: 30px;
+}
+
+.register > form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.register > form input {
+  padding: 13px 10px;
+  width: 270px;
+  outline: none;
+  border: 1px solid var(--bg-dark);
+  background-color: var(--bg-very-dark);
+  font-size: 17px;
+  font-weight: 400;
+  font-family: var(--rubik-font);
+  color: white;
+  border-radius: 4px;
+}
+
+.register > form input::placeholder {
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+}
+
+.register > form button {
+  border: none;
+  color: white;
+  background: var(--purple-color);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--rubik-font);
+  padding: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.register > h1 {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.register .register-h1 {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 40px;
+}

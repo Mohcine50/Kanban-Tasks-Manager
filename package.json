@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Kanban Task Mangement web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.1"
+  }
+}

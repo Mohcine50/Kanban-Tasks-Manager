@@ -1,0 +1,58 @@
+.login {
+  margin-top: 30px;
+}
+
+.login > form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.login > form input {
+  padding: 13px 10px;
+  width: 270px;
+  outline: none;
+  border: 1px solid var(--bg-dark);
+  background-color: var(--bg-very-dark);
+  font-size: 17px;
+  font-weight: 400;
+  font-family: var(--rubik-font);
+  color: white;
+  border-radius: 4px;
+}
+
+.login > form input::placeholder {
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+}
+
+.login > form button {
+  border: none;
+  color: white;
+  background: var(--purple-color);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--rubik-font);
+  padding: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login > h1 {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+.login login-h1 {
+  color: rgb(172, 61, 61);
+  font-size: 25px;
+  font-weight: 500;
+}
+.login .login-h1 {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 40px;
+}
