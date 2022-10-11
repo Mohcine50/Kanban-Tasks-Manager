@@ -19,10 +19,10 @@ app.use("/api/todos", authentication, todosRoute);
 app.use("/api/boards", authentication, boardsRoute);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "view/build")));
+  app.use(express.static(path.join(__dirname, "/view/build")));
 
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "view/build", "index.html"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/view/build", "index.html"));
   });
 }
 
