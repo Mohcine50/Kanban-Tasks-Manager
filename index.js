@@ -18,11 +18,13 @@ app.use("/api/auth", authRoute);
 app.use("/api/todos", authentication, todosRoute);
 app.use("/api/boards", authentication, boardsRoute);
 
-app.use(express.static(path.join(__dirname, "/view/build")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "view/build")));
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/view/build", "index.html"));
-});
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "view/build", "index.html"));
+  });
+}
 
 //Listen Server and Connect to database
 mongoose.connect(MONGODB_CLUSTER, () => {
